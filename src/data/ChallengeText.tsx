@@ -24,9 +24,9 @@ export const challengeStrs = [
       // ここにコードを書いてください
     }`,
     testCases: [
-      { input: [[1, 2, 3]], expected: 6 },
-      { input: [[5, -3, 2]], expected: 4 },
-      { input: [[]], expected: 0 },
+      { input: [1, 2, 3], expected: 6 },
+      { input: [5, -3, 2], expected: 4 },
+      { input: [], expected: 0 },
     ],
   },
   {

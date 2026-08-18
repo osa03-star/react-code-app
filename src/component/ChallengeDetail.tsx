@@ -8,10 +8,10 @@ import type {Challenge} from '../type/type.tsx'
 import { GoChevronLeft } from "react-icons/go";
 
 type ChallengeDetailProps = {
-  challenge: number;
+  challenge: number|null;
   setChallenge: React.Dispatch<React.SetStateAction<number|null>>;
-  setChallengeRule: React.Dispatch<React.SetStateAction<string>>;
-  challengeRule: Challenge;
+  setChallengeRule: React.Dispatch<React.SetStateAction<Challenge|null>>;
+  challengeRule: Challenge|null;
 }
 
 const ChallengeDetail = (props: ChallengeDetailProps): JSX.Element => {
@@ -27,8 +27,8 @@ const ChallengeDetail = (props: ChallengeDetailProps): JSX.Element => {
         <div onClick={() => {props.setChallenge(null)}} className='mb-4 flex items-center cursor-pointer'>
           <GoChevronLeft className='text-2xl'/>戻る
         </div>
-        <h1 className='text-4xl font-bold pb-10'>{item.title}</h1>
-        <p className='mb-4'>{item.description}</p>
+        <h1 className='text-4xl font-bold pb-10'>{item?.title}</h1>
+        <p className='mb-4'>{item?.description}</p>
         <ul className='mb-4 border-b border-solid border-gray-300'>
           <li className='border-1 border-solid p-4 bg-orange-50 border-gray-200 mb-4 rounded-lg cursor-pointer'>
             <button
@@ -39,7 +39,7 @@ const ChallengeDetail = (props: ChallengeDetailProps): JSX.Element => {
             </button>
 
             <div className={isHintOpen ? "mt-2" : "hidden"}>
-              {item.hint}
+              {item?.hint}
             </div>
           </li>
         </ul>

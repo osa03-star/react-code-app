@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import type { JSX } from 'react';
 import type {TestResult} from '../type/type.ts'
 import { GoX, GoCircle } from "react-icons/go";
