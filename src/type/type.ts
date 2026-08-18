@@ -5,8 +5,8 @@ export type TestResult = {
   passed: boolean;
 };
 type TestCase = {
-  input: number[];
-  expected: number;
+  input: unknown[];
+  expected: unknown;
 };
 
 export type Challenge = {

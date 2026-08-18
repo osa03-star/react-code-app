@@ -2,12 +2,13 @@ import { useState } from 'react'
 import ChooseChallenge from './component/ChooseChallenge.tsx'
 import ChallengeDetail from './component/ChallengeDetail.tsx'
 import Coding from './component/Coding.tsx'
+import type {Challenge} from './type/type.tsx'
 
 import './App.css'
 
 function App() {
-  const [challenge, setChallenge] = useState<number|null>()
-  const [challengeRule, setChallengeRule] = useState();
+  const [challenge, setChallenge] = useState<number|null>(null)
+  const [challengeRule, setChallengeRule] = useState<Challenge|null>(null);
 
   return (
     <div>
