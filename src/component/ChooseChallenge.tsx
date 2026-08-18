@@ -1,9 +1,8 @@
-import { useState } from 'react'
 import type { JSX } from 'react';
 import {challengeStrs} from '../data/ChallengeText.tsx';
 
 type ChooseChallengeProps = {
-  setChallenge: React.Dispatch<React.SetStateAction<number>>;
+  setChallenge: React.Dispatch<React.SetStateAction<number|null>>;
   setChallengeRule: React.Dispatch<React.SetStateAction<string>>;
 }
 
