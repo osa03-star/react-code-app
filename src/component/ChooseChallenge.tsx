@@ -15,7 +15,6 @@ const ChooseChallenge = (props: ChooseChallengeProps): JSX.Element => {
       item = challengeStrs.find(item => item.id === number);
     }
     if (item) {
-      console.log(item);
       props.setChallengeRule(item);
     }
   }
